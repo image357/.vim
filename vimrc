@@ -34,9 +34,10 @@ set foldlevelstart=10
 set foldnestmax=10
 nnoremap <space> za
 
-" movement
+" keymap
 nnoremap j gj
 nnoremap k gk
+inoremap jk <esc>
 
 " cursor style
 let &t_SI = "\e[6 q"
