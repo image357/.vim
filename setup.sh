@@ -23,4 +23,5 @@ vim +Helptags +qall
 echo "----------------------------------------"
 echo " done: setup of vim Helptags"
 echo "----------------------------------------"
+echo ""
 
