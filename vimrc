@@ -1,3 +1,7 @@
+" Init {{{
+syntax on                   " enable syntax highlighting
+let mapleader=","           " set comma as leader
+" }}}
 " General Settings {{{
 set modeline                " enables file specific options
 set modelines=2             " search n lines for file specific options
@@ -10,7 +14,6 @@ set expandtab               " tabstop will be expanded to spaces
 filetype indent on          " indentation is filetype specific
 " }}}
 " User Interface {{{
-syntax on                   " enable syntax highlighting
 set number                  " display line numbers
 set showcmd                 " show typed commands
 set wildmenu                " show autocomplete suggenstions
@@ -20,7 +23,7 @@ set showmatch               " highlight matching brackets
 set incsearch               " search while typing
 set hlsearch                " highlight searches
 
-" stop highlighting with leader,space
+" stop highlighting with leader+space
 nnoremap <leader><space> :nohlsearch<CR>
 " }}}
 " Folding {{{
