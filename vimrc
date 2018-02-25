@@ -39,8 +39,8 @@ nnoremap j gj
 nnoremap k gk
 
 " cursor style
-let &t_SI = "\<Esc>[6 q"
-let &t_SR = "\<Esc>[4 q"
-let &t_EI = "\<Esc>[2 q"
-autocmd VimLeave * silent !echo -ne "\<Esc>[6 q"
+let &t_SI = "\e[6 q"
+let &t_SR = "\e[4 q"
+let &t_EI = "\e[2 q"
+autocmd VimLeave * silent !echo -ne "\e[6 q"
 
