@@ -12,12 +12,14 @@ rm -rf $HOME/.vim $HOME/.vimrc && mkdir -p $HOME/.vim && git clone git@github.co
 * gcc / make / ...
 
 # Plugins
-* pathogen  
-  https://github.com/tpope/vim-pathogen
-* command-t  
-  https://github.com/wincent/command-t
 * ack.vim  
   https://github.com/mileszs/ack.vim
+* command-t  
+  https://github.com/wincent/command-t
+* pathogen  
+  https://github.com/tpope/vim-pathogen
+
+
 
 # References
 https://dougblack.io/words/a-good-vimrc.html
