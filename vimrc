@@ -48,5 +48,9 @@ let &t_EI = "\e[2 q"        " wide cursor in normal mode
 " set slim cursor on exit
 autocmd VimLeave * silent !echo -ne "\e[6 q"
 " }}}
-
+" Plugin: ack.vim {{{
+if executable('ag')
+    let g:ackprg = 'ag --vimgrep'
+endif
+" }}}
 " vim:foldmethod=marker:foldlevel=0
