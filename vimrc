@@ -1,5 +1,7 @@
 " Init {{{
+execute pathogen#infect()
 syntax on                   " enable syntax highlighting
+filetype plugin indent on   " indentation is filetype specific
 let mapleader=","           " set comma as leader
 " }}}
 " General Settings {{{
@@ -10,8 +12,6 @@ set tabstop=4               " tabstop is n spaces
 set softtabstop=4           " tabstop will be displayed as n spaces
 set shiftwidth=4            " autoindent will be n spaces
 set expandtab               " tabstop will be expanded to spaces
-
-filetype indent on          " indentation is filetype specific
 " }}}
 " User Interface {{{
 set number                  " display line numbers
