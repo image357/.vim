@@ -1,4 +1,5 @@
 #!/bin/bash
+set -e
 
 echo "----------------------------------------"
 echo " start: setup of command-t"
