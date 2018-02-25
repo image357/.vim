@@ -38,6 +38,9 @@ nnoremap <space> za
 " Keymaps {{{
 nnoremap j gj
 nnoremap k gk
+nnoremap gV `[v`]
+nnoremap <leader>s :mksession<cr>
+
 inoremap jk <esc>
 " }}}
 " Cursor Style {{{
