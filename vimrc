@@ -54,4 +54,7 @@ if executable('ag')
 endif
 nnoremap <leader>a :Ack<space>
 " }}}
+" Plugin: gundo.vim {{{
+nnoremap <leader>u :GundoToggle<cr>
+" }}}
 " vim:foldmethod=marker:foldlevel=0
