@@ -52,5 +52,6 @@ autocmd VimLeave * silent !echo -ne "\e[6 q"
 if executable('ag')
     let g:ackprg = 'ag --vimgrep'
 endif
+nnoremap <leader>a :Ack<space>
 " }}}
 " vim:foldmethod=marker:foldlevel=0
