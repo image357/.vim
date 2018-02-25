@@ -1,47 +1,49 @@
-" syntax highlighting
-syntax on
+" General Settings {{{
+set modeline                " enables file specific options
+set modelines=2             " search n lines for file specific options
 
-" tabstop settings
-set tabstop=4
-set softtabstop=4
-set expandtab
+set tabstop=4               " tabstop is n spaces
+set softtabstop=4           " tabstop will be displayed as n spaces
+set shiftwidth=4            " autoindent will be n spaces
+set expandtab               " tabstop will be expanded to spaces
 
+filetype indent on          " indentation is filetype specific
+" }}}
+" User Interface {{{
+syntax on                   " enable syntax highlighting
+set number                  " display line numbers
+set showcmd                 " show typed commands
+set wildmenu                " show autocomplete suggenstions
+set showmatch               " highlight matching brackets
+" }}}
+" Vim Search {{{
+set incsearch               " search while typing
+set hlsearch                " highlight searches
 
-" display line numbers
-set number
-
-" show typed commands
-set showcmd
-
-" identation - file specific
-filetype indent on
-
-" show autocomplete suggestions
-set wildmenu
-
-" highlight parenthesis
-set showmatch
-
-" vim search
-set incsearch
-set hlsearch
+" stop highlighting with leader,space
 nnoremap <leader><space> :nohlsearch<CR>
+" }}}
+" Folding {{{
+set foldenable              " enalbe folding
+set foldmethod=indent       " folding based on identation
+set foldlevelstart=10       " autofold when loading at level n
+set foldnestmax=10          " maximum allowed nested folds
 
-" folding
-set foldenable
-set foldmethod=indent
-set foldlevelstart=10
-set foldnestmax=10
+" toogle fold with space
 nnoremap <space> za
-
-" keymap
+" }}}
+" Keymaps {{{
 nnoremap j gj
 nnoremap k gk
 inoremap jk <esc>
+" }}}
+" Cursor Style {{{
+let &t_SI = "\e[6 q"        " slim cursor in insert mode
+let &t_SR = "\e[4 q"        " underscore cursor in replace mode
+let &t_EI = "\e[2 q"        " wide cursor in normal mode
 
-" cursor style
-let &t_SI = "\e[6 q"
-let &t_SR = "\e[4 q"
-let &t_EI = "\e[2 q"
+" set slim cursor on exit
 autocmd VimLeave * silent !echo -ne "\e[6 q"
+" }}}
 
+" vim:foldmethod=marker:foldlevel=0
