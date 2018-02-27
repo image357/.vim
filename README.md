@@ -10,6 +10,8 @@ rm -rf $HOME/.vim $HOME/.vimrc && mkdir -p $HOME/.vim && git clone git@github.co
 * python-dev
 * ruby-dev
 * gcc / make / ...
+* The Silver Searcher  
+  https://github.com/ggreer/the_silver_searcher
 
 # Plugins
 * ack.vim  
