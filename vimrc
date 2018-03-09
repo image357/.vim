@@ -50,8 +50,9 @@ let &t_SI = "\e[6 q"        " slim cursor in insert mode
 let &t_SR = "\e[4 q"        " underscore cursor in replace mode
 let &t_EI = "\e[2 q"        " wide cursor in normal mode
 
-" set slim cursor on exit
+" set cursor on exit and start
 autocmd VimLeave * silent !echo -ne "\e[6 q"
+autocmd VimEnter * silent !echo -ne "\e[2 q"
 " }}}
 " Plugin: ack.vim {{{
 if executable('ag')
