@@ -22,6 +22,8 @@ set showmatch               " highlight matching brackets
 " Vim Search {{{
 set incsearch               " search while typing
 set hlsearch                " highlight searches
+set ignorecase              " no case sensitve search
+set smartcase               " case sensitve for capital letters
 
 " stop highlighting with leader+space
 nnoremap <leader><space> :nohlsearch<CR>
