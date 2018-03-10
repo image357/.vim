@@ -8,7 +8,7 @@ echo "----------------------------------------"
 COMMANDTPATH=`ls "$HOME/.vim/bundle/" | grep command-t`
 COMMANDTBUILDPATH="$HOME/.vim/bundle/$COMMANDTPATH/ruby/command-t/ext/command-t"
 
-cd $COMMANDTBUILDPATH
+cd "$COMMANDTBUILDPATH"
 ruby extconf.rb
 make
 echo "----------------------------------------"
