@@ -5,11 +5,13 @@ set -e
 BASE_PATH="$HOME/.vim"
 ACKVIM_PATH="$BASE_PATH/bundle/ack.vim"
 COMMANDT_PATH="$BASE_PATH/bundle/command-t"
+GUNDOVIM_PATH="$BASE_PATH/bundle/gundo.vim"
 YOUCOMPLETEME_PATH="$BASE_PATH/bundle/YouCompleteMe"
 
 # version variables
 ACKVIM_VERSION="tags/1.0.9"
 COMMANDT_VERSION="tags/5.0.2"
+GUNDOVIM_VERSION="tags/v2.6.2"
 YOUCOMPLETEME_VERSION="master"
 
 
@@ -38,10 +40,10 @@ git submodule update --recursive --remote
 
 
 # setup ack.vim
-startsetup ack.vim
+startsetup "ack.vim"
 cd "$ACKVIM_PATH"
 git checkout "$ACKVIM_VERSION"
-endsetup ack.vim
+endsetup "ack.vim"
 
 
 # setup command-t
@@ -54,6 +56,13 @@ make
 endsetup "command-t"
 
 
+# setup gundo.vim
+startsetup "gundo.vim"
+cd "$GUNDOVIM_PATH"
+git checkout "$GUNDOVIM_VERSION"
+endsetup "gundo.vim"
+
+
 # setup YouCompleteMe
 startsetup "YouCompleteMe"
 cd "$YOUCOMPLETEME_PATH"
@@ -63,6 +72,7 @@ endsetup "YouCompleteMe"
 
 # init Helptags
 startsetup "vim Helptags"
+echo "generating Helptags ..."
 vim +Helptags +qall
 endsetup "vim Helptags"
 
