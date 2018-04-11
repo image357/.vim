@@ -4,7 +4,13 @@ set -e
 # path variables
 BASE_PATH="$HOME/.vim"
 ACKVIM_PATH="$BASE_PATH/bundle/ack.vim"
+COMMANDT_PATH="$BASE_PATH/bundle/command-t"
 YOUCOMPLETEME_PATH="$BASE_PATH/bundle/YouCompleteMe"
+
+# version variables
+ACKVIM_VERSION="tags/1.0.9"
+COMMANDT_VERSION="tags/5.0.2"
+YOUCOMPLETEME_VERSION="master"
 
 
 # print functions
@@ -34,16 +40,15 @@ git submodule update --recursive --remote
 # setup ack.vim
 startsetup ack.vim
 cd "$ACKVIM_PATH"
-git checkout tags/1.0.9
+git checkout "$ACKVIM_VERSION"
 endsetup ack.vim
 
 
 # setup command-t
 startsetup "command-t"
-COMMANDTPATH=`ls "$HOME/.vim/bundle/" | grep command-t`
-COMMANDTBUILDPATH="$HOME/.vim/bundle/$COMMANDTPATH/ruby/command-t/ext/command-t"
-
-cd "$COMMANDTBUILDPATH"
+cd "$COMMANDT_PATH"
+git checkout "$COMMANDT_VERSION"
+cd "$COMMANDT_PATH/ruby/command-t/ext/command-t"
 ruby extconf.rb
 make
 endsetup "command-t"
@@ -52,7 +57,7 @@ endsetup "command-t"
 # setup YouCompleteMe
 startsetup "YouCompleteMe"
 cd "$YOUCOMPLETEME_PATH"
-git checkout master
+git checkout "$YOUCOMPLETEME_VERSION"
 endsetup "YouCompleteMe"
 
 
