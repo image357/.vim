@@ -7,9 +7,10 @@ rm -rf "$HOME/.vim" "$HOME/.vimrc" && mkdir -p "$HOME/.vim" && git clone git@git
 ```
 
 # Dependencies
-* python-dev
+* python-dev / python3-dev
 * ruby-dev
-* gcc / make / ...
+* gcc / make
+* clang / libclang-devel
 * The Silver Searcher  
   https://github.com/ggreer/the_silver_searcher
 
@@ -22,6 +23,8 @@ rm -rf "$HOME/.vim" "$HOME/.vimrc" && mkdir -p "$HOME/.vim" && git clone git@git
   https://github.com/sjl/gundo.vim
 * pathogen  
   https://github.com/tpope/vim-pathogen
+* YouCompleteMe  
+  https://github.com/Valloric/YouCompleteMe
 
 
 
