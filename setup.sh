@@ -35,14 +35,14 @@ function endsetup {
 
 # init submodules
 cd "$BASE_PATH"
-git submodule update --init --recursive
-git submodule update --recursive --remote
+git submodule update --init
 
 
 # setup ack.vim
 startsetup "ack.vim"
 cd "$ACKVIM_PATH"
 git checkout "$ACKVIM_VERSION"
+git submodule update --init --recursive
 endsetup "ack.vim"
 
 
@@ -50,6 +50,7 @@ endsetup "ack.vim"
 startsetup "command-t"
 cd "$COMMANDT_PATH"
 git checkout "$COMMANDT_VERSION"
+git submodule update --init --recursive
 cd "$COMMANDT_PATH/ruby/command-t/ext/command-t"
 ruby extconf.rb
 make
@@ -60,6 +61,7 @@ endsetup "command-t"
 startsetup "gundo.vim"
 cd "$GUNDOVIM_PATH"
 git checkout "$GUNDOVIM_VERSION"
+git submodule update --init --recursive
 endsetup "gundo.vim"
 
 
@@ -67,6 +69,7 @@ endsetup "gundo.vim"
 startsetup "YouCompleteMe"
 cd "$YOUCOMPLETEME_PATH"
 git checkout "$YOUCOMPLETEME_VERSION"
+git submodule update --init --recursive
 CYGTEST=`uname -a | grep -i cygwin`
 if [ "$CYGTEST" == "" ]; then
     ./install.py --clang-completer
