@@ -2,15 +2,19 @@
 	path = bundle/YouCompleteMe
 	url = https://github.com/Valloric/YouCompleteMe.git
 	branch = master
+	ignore = all
 [submodule "bundle/ack.vim"]
 	path = bundle/ack.vim
 	url = https://github.com/mileszs/ack.vim.git
 	branch = master
+	ignore = all
 [submodule "bundle/command-t"]
 	path = bundle/command-t
 	url = https://github.com/wincent/command-t.git
 	branch = master
+	ignore = all
 [submodule "bundle/gundo.vim"]
 	path = bundle/gundo.vim
 	url = https://github.com/sjl/gundo.vim.git
 	branch = master
+	ignore = all
