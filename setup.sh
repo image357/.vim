@@ -35,7 +35,7 @@ function endsetup {
 
 # init submodules
 cd "$BASE_PATH"
-git submodule update --init
+git submodule update --init --recursive
 git submodule update --recursive --remote
 
 
