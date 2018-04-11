@@ -6,3 +6,7 @@
 	path = bundle/ack.vim
 	url = https://github.com/mileszs/ack.vim.git
 	branch = master
+[submodule "bundle/command-t"]
+	path = bundle/command-t
+	url = https://github.com/wincent/command-t.git
+	branch = master
