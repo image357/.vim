@@ -1,6 +1,11 @@
 #!/bin/bash
 set -e
 
+# init submodules
+git submodule update --init
+git submodule update --recursive --remote
+
+
 echo ""
 echo "----------------------------------------"
 echo " start: setup of command-t"
