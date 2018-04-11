@@ -67,6 +67,14 @@ endsetup "gundo.vim"
 startsetup "YouCompleteMe"
 cd "$YOUCOMPLETEME_PATH"
 git checkout "$YOUCOMPLETEME_VERSION"
+CYGTEST=`uname -a | grep -i cygwin`
+if [ "$CYGTEST" == "" ]; then
+    ./install.py --clang-completer
+else
+    echo "warning: cygwin does not support YouCompleteMe with clang"
+    ./install.py
+    echo "warning: cygwin does not support YouCompleteMe with clang"
+fi
 endsetup "YouCompleteMe"
 
 
