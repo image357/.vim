@@ -10,3 +10,7 @@
 	path = bundle/command-t
 	url = https://github.com/wincent/command-t.git
 	branch = master
+[submodule "bundle/gundo.vim"]
+	path = bundle/gundo.vim
+	url = https://github.com/sjl/gundo.vim.git
+	branch = master
