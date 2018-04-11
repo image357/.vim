@@ -1,5 +1,6 @@
 #!/bin/bash
 set -e
+cd "$HOME/.vim"
 
 # init submodules
 git submodule update --init
