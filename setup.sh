@@ -71,7 +71,7 @@ startsetup "YouCompleteMe"
 cd "$YOUCOMPLETEME_PATH"
 git checkout "$YOUCOMPLETEME_VERSION"
 git submodule update --init --recursive
-CYGTEST=`uname -a | grep -i cygwin`
+CYGTEST=`uname -a | grep -i cygwin | cat`
 if [ "$CYGTEST" == "" ]; then
     ./install.py --clang-completer
 else
