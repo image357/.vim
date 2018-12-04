@@ -10,7 +10,7 @@ YOUCOMPLETEME_PATH="$BASE_PATH/bundle/YouCompleteMe"
 
 # version variables
 ACKVIM_VERSION="tags/1.0.9"
-COMMANDT_VERSION="tags/5.0.2"
+COMMANDT_VERSION="tags/5.0.3"
 GUNDOVIM_VERSION="tags/v2.6.2"
 YOUCOMPLETEME_VERSION="master"
 
