@@ -41,7 +41,8 @@ nnoremap <space> za
 nnoremap j gj
 nnoremap k gk
 nnoremap gV `[v`]
-nnoremap <leader>s :mksession!<cr>
+nnoremap <leader>s :mksession! ~/.vim/session<cr>
+nnoremap <leader>d :source ~/.vim/session<cr>
 
 inoremap jk <esc>
 " }}}
