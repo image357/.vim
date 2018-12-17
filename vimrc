@@ -41,7 +41,7 @@ nnoremap <space> za
 nnoremap j gj
 nnoremap k gk
 nnoremap gV `[v`]
-nnoremap <leader>s :mksession<cr>
+nnoremap <leader>s :mksession!<cr>
 
 inoremap jk <esc>
 " }}}
@@ -61,6 +61,7 @@ endif
 nnoremap <leader>a :Ack<space>
 " }}}
 " Plugin: gundo.vim {{{
+let g:gundo_prefer_python3 = 1
 nnoremap <leader>u :GundoToggle<cr>
 " }}}
 " vim:foldmethod=marker:foldlevel=0
