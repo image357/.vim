@@ -65,4 +65,7 @@ nnoremap <leader>a :Ack<space>
 let g:gundo_prefer_python3 = 1
 nnoremap <leader>u :GundoToggle<cr>
 " }}}
+" Plugin: YouCompleteMe {{{
+let g:ycm_global_ycm_extra_conf = '~/.vim/ycm_extra_conf_default.py'
+" }}}
 " vim:foldmethod=marker:foldlevel=0
