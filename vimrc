@@ -67,5 +67,6 @@ nnoremap <leader>u :GundoToggle<cr>
 " }}}
 " Plugin: YouCompleteMe {{{
 let g:ycm_global_ycm_extra_conf = '~/.vim/ycm_extra_conf_default.py'
+nnoremap <leader>c :YcmForceCompileAndDiagnostics<cr>
 " }}}
 " vim:foldmethod=marker:foldlevel=0
