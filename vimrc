@@ -42,7 +42,7 @@ nnoremap j gj
 nnoremap k gk
 nnoremap gV `[v`]
 nnoremap <leader>s :mksession! ~/.vim/session<cr>
-nnoremap <leader>d :source ~/.vim/session<cr>
+nnoremap <leader>l :source ~/.vim/session<cr>
 
 inoremap jk <esc>
 " }}}
@@ -67,6 +67,8 @@ nnoremap <leader>u :GundoToggle<cr>
 " }}}
 " Plugin: YouCompleteMe {{{
 let g:ycm_global_ycm_extra_conf = '~/.vim/ycm_extra_conf_default.py'
+let g:ycm_goto_buffer_command = 'new-tab'
 nnoremap <leader>c :YcmForceCompileAndDiagnostics<cr>
+nnoremap <leader>d :YcmCompleter GoTo<cr>
 " }}}
 " vim:foldmethod=marker:foldlevel=0
