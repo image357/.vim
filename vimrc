@@ -38,8 +38,8 @@ set foldnestmax=10          " maximum allowed nested folds
 nnoremap <space> za
 " }}}
 " Commands {{{
-command! -nargs=* -complete=shellcmd rnew execute "new | r! <args>"
-command! -nargs=* -complete=shellcmd rtab execute "tabnew | r! <args>"
+command! -nargs=* -complete=shellcmd Rsplit execute "split | r! <args>"
+command! -nargs=* -complete=shellcmd Rtab execute "tabnew | r! <args>"
 " }}}
 " Keymaps {{{
 nnoremap j gj
@@ -50,7 +50,7 @@ nnoremap <leader>l :source ~/.vim/session<cr>
 
 inoremap jk <esc>
 
-autocmd FileType python nnoremap <leader>r :w<cr>:rtab python #<cr>
+autocmd FileType python nnoremap <leader>r :w<cr>:Rtab python #<cr>
 " }}}
 " Cursor Style {{{
 let &t_SI = "\e[6 q"        " slim cursor in insert mode
