@@ -66,7 +66,7 @@ let g:gundo_prefer_python3 = 1
 nnoremap <leader>u :GundoToggle<cr>
 " }}}
 " Plugin: YouCompleteMe {{{
-let g:ycm_global_ycm_extra_conf = '~/.vim/ycm_extra_conf_default.py'
+let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
 let g:ycm_goto_buffer_command = 'new-tab'
 nnoremap <leader>c :YcmForceCompileAndDiagnostics<cr>
 nnoremap <leader>d :YcmCompleter GoTo<cr>
