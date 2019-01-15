@@ -62,6 +62,8 @@ nnoremap <leader>l :source ~/.vim/session<cr>
 
 inoremap jk <esc>
 
+tnoremap <Esc> <C-\><C-n>
+
 autocmd FileType python nnoremap <leader>r :exec RunPythonTab()<cr>
 " }}}
 " Cursor Style {{{
