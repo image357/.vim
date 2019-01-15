@@ -38,21 +38,19 @@ set foldnestmax=10          " maximum allowed nested folds
 nnoremap <space> za
 " }}}
 " Commands {{{
-command! -nargs=* -complete=shellcmd Rsplit execute "new | setlocal buftype=nofile | setlocal bufhidden=hide | setlocal noswapfile | r! <args>"
-command! -nargs=* -complete=shellcmd Rtab execute "tabnew | setlocal buftype=nofile | setlocal bufhidden=hide | setlocal noswapfile | r! <args>"
+command! -nargs=* -complete=shellcmd Rtab execute "tabnew | setlocal buftype=nofile | setlocal bufhidden=hide | setlocal noswapfile | terminal ++curwin <args>"
+command! -nargs=* -complete=shellcmd Rsplit execute "new | setlocal buftype=nofile | setlocal bufhidden=hide | setlocal noswapfile | terminal ++curwin <args>"
 
 function RunPythonTab()
-    :write! %.tmp
-    :Rtab python #.tmp
-    :call feedkeys("<cr>")
-    :call delete(@# . ".tmp")
+    :let pyfile = expand("%")
+    :write
+    :execute "Rtab python " . pyfile
 endfunction
 
 function RunPythonSplit()
-    :write! %.tmp
-    :Rsplit python #.tmp
-    :call feedkeys("<cr>")
-    :call delete(@# . ".tmp")
+    :let pyfile = expand("%")
+    :write
+    :execute "Rsplit python " . pyfile
 endfunction
 " }}}
 " Keymaps {{{
