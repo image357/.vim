@@ -89,7 +89,7 @@ nnoremap <leader>u :GundoToggle<cr>
 let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
 let g:ycm_goto_buffer_command = 'new-tab'
 nnoremap <leader>c :YcmForceCompileAndDiagnostics<cr>
-nnoremap <leader>d :YcmCompleter GoTo<cr>
+nnoremap <leader>g :YcmCompleter GoTo<cr>
 nnoremap <leader>h :YcmCompleter GetDoc<cr>
 " }}}
 " vim:foldmethod=marker:foldlevel=0
