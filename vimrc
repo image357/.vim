@@ -38,8 +38,8 @@ set foldnestmax=10          " maximum allowed nested folds
 nnoremap <space> za
 " }}}
 " Commands {{{
-command! -nargs=* -complete=shellcmd Rtab execute "tabnew | setlocal buftype=nofile | setlocal bufhidden=hide | setlocal noswapfile | terminal ++curwin ++close <args>"
-command! -nargs=* -complete=shellcmd Rsplit execute "new | setlocal buftype=nofile | setlocal bufhidden=hide | setlocal noswapfile | terminal ++curwin ++close <args>"
+command! -nargs=* -complete=shellcmd Rtab execute "tabnew | setlocal buftype=nofile | setlocal bufhidden=wipe | setlocal noswapfile | terminal ++curwin ++close <args>"
+command! -nargs=* -complete=shellcmd Rsplit execute "new | setlocal buftype=nofile | setlocal bufhidden=wipe | setlocal noswapfile | terminal ++curwin ++close <args>"
 
 function RunPythonTab()
     :let pyfile = expand("%")
