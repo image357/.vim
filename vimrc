@@ -81,6 +81,10 @@ if executable('ag')
 endif
 nnoremap <leader>a :Ack<space>
 " }}}
+" Plugin: Command-T {{{
+let g:CommandTAcceptSelectionMap = '<C-t>'
+let g:CommandTAcceptSelectionTabMap = '<CR>'
+" }}}
 " Plugin: gundo.vim {{{
 let g:gundo_prefer_python3 = 1
 nnoremap <leader>u :GundoToggle<cr>
