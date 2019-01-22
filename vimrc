@@ -12,8 +12,6 @@ set tabstop=4               " tabstop is n spaces
 set softtabstop=4           " tabstop will be displayed as n spaces
 set shiftwidth=4            " autoindent will be n spaces
 set expandtab               " tabstop will be expanded to spaces
-
-set switchbuf=usetab,newtab " open buffers in tabs
 " }}}
 " User Interface {{{
 set number                  " display line numbers
@@ -81,7 +79,7 @@ autocmd VimEnter * silent !echo -ne "\e[2 q"
 if executable('ag')
     let g:ackprg = 'ag --vimgrep'
 endif
-nnoremap <leader>a :Ack<space>
+nnoremap <leader>a :tabnew<CR>:Ack<space>
 " }}}
 " Plugin: Command-T {{{
 let g:CommandTAcceptSelectionMap = '<C-t>'
