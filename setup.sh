@@ -14,6 +14,9 @@ COMMANDT_VERSION="tags/5.0.3"
 GUNDOVIM_VERSION="tags/v2.6.2"
 YOUCOMPLETEME_VERSION="master"
 
+# cygwin test
+CYGTEST=`uname -a | grep -i cygwin | cat`
+
 
 # print functions
 function startsetup {
@@ -69,12 +72,13 @@ endsetup "gundo.vim"
 # setup YouCompleteMe
 startsetup "YouCompleteMe"
 cd "$YOUCOMPLETEME_PATH"
-git checkout "$YOUCOMPLETEME_VERSION"
-git submodule update --init --recursive
-CYGTEST=`uname -a | grep -i cygwin | cat`
 if [ "$CYGTEST" == "" ]; then
+    git checkout "$YOUCOMPLETEME_VERSION"
+    git submodule update --init --recursive
     ./install.py --clang-completer
 else
+    git checkout "95efbc87668783be8eadd94945cf6eba70823eea"
+    git submodule update --init --recursive
     ./install.py --clang-completer --system-libclang
     echo "warning: Cygwin uses system libclang"
 fi
