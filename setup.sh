@@ -5,12 +5,14 @@ set -e
 BASE_PATH="$HOME/.vim"
 ACKVIM_PATH="$BASE_PATH/bundle/ack.vim"
 COMMANDT_PATH="$BASE_PATH/bundle/command-t"
+GRUVBOX_PATH="$BASE_PATH/bundle/gruvbox"
 GUNDOVIM_PATH="$BASE_PATH/bundle/gundo.vim"
 YOUCOMPLETEME_PATH="$BASE_PATH/bundle/YouCompleteMe"
 
 # version variables
 ACKVIM_VERSION="master"
 COMMANDT_VERSION="tags/5.0.3"
+GRUVBOX_VERSION="tags/v3.0.1-rc.0"
 GUNDOVIM_VERSION="tags/v2.6.2"
 YOUCOMPLETEME_VERSION="master"
 
@@ -59,6 +61,14 @@ cd "$COMMANDT_PATH/ruby/command-t/ext/command-t"
 ruby extconf.rb
 make
 endsetup "command-t"
+
+
+# setup gruvbox
+startsetup "gruvbox"
+cd "$GRUVBOX_PATH"
+git checkout "$GRUVBOX_VERSION"
+git submodule update --init --recursive
+endsetup "gruvbox"
 
 
 # setup gundo.vim
