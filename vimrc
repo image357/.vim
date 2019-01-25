@@ -19,6 +19,12 @@ set showcmd                 " show typed commands
 set wildmenu                " show autocomplete suggenstions
 set showmatch               " highlight matching brackets
 " }}}
+" Colorscheme {{{
+set termguicolors
+let g:gruvbox_italic=1
+colorscheme gruvbox
+set background=dark
+" }}}
 " Vim Search {{{
 set incsearch               " search while typing
 set hlsearch                " highlight searches
