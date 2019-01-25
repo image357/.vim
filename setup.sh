@@ -3,6 +3,7 @@ set -e
 
 # path variables
 BASE_PATH="$HOME/.vim"
+PATHOGEN_PATH="$HOME/.vim/pathogen"
 ACKVIM_PATH="$BASE_PATH/bundle/ack.vim"
 COMMANDT_PATH="$BASE_PATH/bundle/command-t"
 GRUVBOX_PATH="$BASE_PATH/bundle/gruvbox"
@@ -10,6 +11,7 @@ GUNDOVIM_PATH="$BASE_PATH/bundle/gundo.vim"
 YOUCOMPLETEME_PATH="$BASE_PATH/bundle/YouCompleteMe"
 
 # version variables
+PATHOGEN_VERSION="master"
 ACKVIM_VERSION="master"
 COMMANDT_VERSION="tags/5.0.3"
 GRUVBOX_VERSION="tags/v3.0.1-rc.0"
@@ -42,6 +44,15 @@ function endsetup {
 cd "$BASE_PATH"
 git submodule update --init
 git submodule update --remote
+
+
+# setup pathogen
+startsetup "pathogen.vim"
+cd "$PATHOGEN_PATH"
+git checkout "$PATHOGEN_VERSION"
+git submodule update --init --recursive
+cp "$PATHOGEN_PATH/autoload/pathogen.vim" "$BASE_PATH/autoload/pathogen.vim"
+endsetup "pathogen.vim"
 
 
 # setup ack.vim
