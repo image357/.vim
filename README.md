@@ -19,6 +19,8 @@ rm -rf "$HOME/.vim" "$HOME/.vimrc" && mkdir -p "$HOME/.vim" && git clone git@git
   https://github.com/mileszs/ack.vim
 * command-t  
   https://github.com/wincent/command-t
+* gruvbox
+  https://github.com/morhetz/gruvbox
 * gundo.vim  
   https://github.com/sjl/gundo.vim
 * pathogen  
