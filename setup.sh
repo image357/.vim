@@ -52,7 +52,8 @@ cd "$PATHOGEN_PATH"
 git checkout "$PATHOGEN_VERSION"
 git submodule update --init --recursive
 cp "$PATHOGEN_PATH/autoload/pathogen.vim" "$BASE_PATH/autoload/pathogen.vim"
-git update-index --assume-unchanged "$BASE_PATH/autoload/pathogen.vim" 
+cd "$BASE_PATH"
+git update-index --assume-unchanged "autoload/pathogen.vim" 
 endsetup "pathogen.vim"
 
 
