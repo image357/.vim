@@ -12,6 +12,9 @@ set tabstop=4               " tabstop is n spaces
 set softtabstop=4           " tabstop will be displayed as n spaces
 set shiftwidth=4            " autoindent will be n spaces
 set expandtab               " tabstop will be expanded to spaces
+
+set encoding=utf-8          " utf-8 encoding for terminal
+set fileencoding=utf-8      " utf-8 file encoding
 " }}}
 " User Interface {{{
 set number                  " display line numbers

@@ -18,8 +18,9 @@ GRUVBOX_VERSION="tags/v3.0.1-rc.0"
 GUNDOVIM_VERSION="tags/v2.6.2"
 YOUCOMPLETEME_VERSION="master"
 
-# cygwin test
+# operating system test
 CYGTEST=`uname -a | grep -i cygwin | cat`
+FBSDTEST=`uname -a | grep -i FreeBSD | cat`
 
 
 # print functions
@@ -72,7 +73,11 @@ git checkout "$COMMANDT_VERSION"
 git submodule update --init --recursive
 cd "$COMMANDT_PATH/ruby/command-t/ext/command-t"
 ruby extconf.rb
-make
+if [ "$FBSDTEST" == "" ]; then
+    make
+else
+    gmake
+fi
 endsetup "command-t"
 
 
