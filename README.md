@@ -65,6 +65,9 @@ You can change this setting in `$HOME/.vim/vimrc`.
 * **`<leader> <space>`**  
   Stop highlighting search results.
   
+* **`<space>`**  
+  Toogle code folding.
+  
 * **`<leader> s`**  
   Save current vim session.
   
