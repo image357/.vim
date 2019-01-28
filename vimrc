@@ -2,9 +2,10 @@
 execute pathogen#infect()
 syntax on                   " enable syntax highlighting
 filetype plugin indent on   " indentation is filetype specific
-let mapleader=","           " set comma as leader
 " }}}
 " General Settings {{{
+let mapleader=","           " set comma as leader
+
 set modeline                " enables file specific options
 set modelines=2             " search n lines for file specific options
 
@@ -80,7 +81,7 @@ nnoremap <leader>l :source ~/.vim/session<cr>
 
 inoremap jk <esc>
 
-tnoremap <Esc> <C-\><C-n>
+tnoremap <esc> <C-\><C-n>
 
 autocmd FileType python nnoremap <leader>r :exec RunPythonTab()<cr>
 " }}}
