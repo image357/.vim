@@ -6,6 +6,31 @@
 rm -rf "$HOME/.vim" "$HOME/.vimrc" && mkdir -p "$HOME/.vim" && git clone git@github.com:image357/.vim.git "$HOME/.vim" || git clone https://github.com/image357/.vim.git "$HOME/.vim" && "$HOME/.vim/setup.sh"
 ```
 
+# Dependencies
+* python2-dev / python3-dev
+* ruby-dev
+* gcc / (g)make / cmake
+* clang / libclang-devel / libc++-dev
+* The Silver Searcher  
+  https://github.com/ggreer/the_silver_searcher
+
+# Plugins
+* ack.vim  
+  https://github.com/mileszs/ack.vim
+* command-t  
+  https://github.com/wincent/command-t
+* gruvbox  
+  https://github.com/morhetz/gruvbox
+* gundo.vim  
+  https://github.com/sjl/gundo.vim
+* pathogen  
+  https://github.com/tpope/vim-pathogen
+* YouCompleteMe  
+  https://github.com/Valloric/YouCompleteMe
+
+# References
+https://dougblack.io/words/a-good-vimrc.html
+
 # Bindings and Features
 The `<leader>` key is mapped by default to `comma` which has the same position on international and language specific keyboards.
 You can change this setting in `$HOME/.vim/vimrc`.
@@ -58,30 +83,3 @@ You can change this setting in `$HOME/.vim/vimrc`.
   
 ### Autocompletion
 C/C++ autocompletion needs a `.ycm_extra_conf.py` file in the current directory. If there is none, the default file `$HOME/vim/.ycm_extra_conf.py` will be used. Python autocompletion works out of the box, but can use an extra-conf-file (for setting up virtualenvs etc.).
-
-# Dependencies
-* python2-dev / python3-dev
-* ruby-dev
-* gcc / (g)make / cmake
-* clang / libclang-devel / libc++-dev
-* The Silver Searcher  
-  https://github.com/ggreer/the_silver_searcher
-
-# Plugins
-* ack.vim  
-  https://github.com/mileszs/ack.vim
-* command-t  
-  https://github.com/wincent/command-t
-* gruvbox  
-  https://github.com/morhetz/gruvbox
-* gundo.vim  
-  https://github.com/sjl/gundo.vim
-* pathogen  
-  https://github.com/tpope/vim-pathogen
-* YouCompleteMe  
-  https://github.com/Valloric/YouCompleteMe
-
-
-
-# References
-https://dougblack.io/words/a-good-vimrc.html
