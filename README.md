@@ -9,7 +9,7 @@ rm -rf "$HOME/.vim" "$HOME/.vimrc" && mkdir -p "$HOME/.vim" && git clone git@git
 # Dependencies
 * python2-dev / python3-dev
 * ruby-dev
-* gcc / make / cmake
+* gcc / (g)make / cmake
 * clang / libclang-devel / libc++-dev
 * The Silver Searcher  
   https://github.com/ggreer/the_silver_searcher
