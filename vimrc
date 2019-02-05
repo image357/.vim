@@ -63,13 +63,23 @@ command! -nargs=* -complete=shellcmd Rsplit execute "new | setlocal buftype=nofi
 function RunPythonTab()
     :let pyfile = expand("%")
     :write
-    :execute "Rtab python -i " . pyfile
+    :let py3exists = executable("python3")
+    :if py3exists
+    :   execute "Rtab python3 -i " . pyfile
+    :else
+    :   execute "Rtab python -i " . pyfile
+    :endif
 endfunction
 
 function RunPythonSplit()
     :let pyfile = expand("%")
     :write
-    :execute "Rsplit python -i " . pyfile
+    :let py3exists = executable("python3")
+    :if py3exists
+    :   execute "Rsplit python3 -i " . pyfile
+    :else
+    :   execute "Rsplit python -i " . pyfile
+    :endif
 endfunction
 " }}}
 " Keymaps {{{
