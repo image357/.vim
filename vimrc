@@ -120,7 +120,7 @@ nnoremap <leader>u :GundoToggle<cr>
 " }}}
 " Plugin: YouCompleteMe {{{
 let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
-let g:ycm_goto_buffer_command = 'new-tab'
+let g:ycm_goto_buffer_command = 'new-or-existing-tab'
 nnoremap <leader>c :YcmForceCompileAndDiagnostics<cr>
 nnoremap <leader>g :YcmCompleter GoTo<cr>
 nnoremap <leader>h :YcmCompleter GetDoc<cr>
