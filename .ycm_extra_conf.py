@@ -1,11 +1,10 @@
 default_flags = [
-        "-std=c++17",
-        "-stdlib=libc++",
         "-x",
         "c++",
+        "-std=c++17",
+        "-stdlib=libc++",
         "-Wall",
         "-Wextra",
-        "-Werror",
 ]
 
 
