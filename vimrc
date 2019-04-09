@@ -9,6 +9,9 @@ let mapleader=","           " set comma as leader
 set modeline                " enables file specific options
 set modelines=2             " search n lines for file specific options
 
+set splitbelow              " open horizontal splits in the lower window
+set splitright              " open vertical splits in the right window
+
 set tabstop=4               " tabstop is n spaces
 set softtabstop=4           " tabstop will be displayed as n spaces
 set shiftwidth=4            " autoindent will be n spaces
