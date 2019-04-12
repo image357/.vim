@@ -8,13 +8,13 @@ def get_cpp_flags():
             "-Wextra",
     ]
 
-    return flags
+    return [i for i in flags if i]
 
 
 def get_python_sys_path():
     sys_path = []
 
-    return sys_path
+    return [i for i in sys_path if i]
 
 
 def Settings(**kwargs):
