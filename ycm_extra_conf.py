@@ -1,5 +1,7 @@
 def get_cpp_flags():
-    flags = [
+    flags = []
+
+    flags += [
             "-x",
             "c++",
             "-std=c++17",
