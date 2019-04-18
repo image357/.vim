@@ -26,6 +26,7 @@ set number                  " display line numbers
 set showcmd                 " show typed commands
 set wildmenu                " show autocomplete suggenstions
 set showmatch               " highlight matching brackets
+set colorcolumn=80
 " }}}
 " Colorscheme {{{
 set termguicolors
