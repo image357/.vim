@@ -103,11 +103,11 @@ cd "$YOUCOMPLETEME_PATH"
 if [ "$CYGTEST" == "" ]; then
     git checkout "$YOUCOMPLETEME_VERSION"
     git submodule update --init --recursive
-    ./install.py --clang-completer
+    ./install.py --clang-completer --go-completer
 else
     git checkout "95efbc87668783be8eadd94945cf6eba70823eea"
     git submodule update --init --recursive
-    ./install.py --clang-completer --system-libclang
+    ./install.py --clang-completer --system-libclang --go-completer
     echo "warning: Cygwin uses system libclang"
 fi
 endsetup "YouCompleteMe"
