@@ -7,7 +7,7 @@ rm -rf "$HOME/.vim" "$HOME/.vimrc" && mkdir -p "$HOME/.vim" && git clone git@git
 ```
 
 # Dependencies
-* python2-dev / python3-dev
+* python3-dev
 * ruby-dev
 * golang
 * gcc / (g)make / cmake
