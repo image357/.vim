@@ -3,7 +3,7 @@
 
 # Clean Setup
 ```bash
-rm -rf "$HOME/.vim" "$HOME/.vimrc" && mkdir -p "$HOME/.vim" && git clone git@github.com:image357/.vim.git "$HOME/.vim" || git clone https://github.com/image357/.vim.git "$HOME/.vim" && "$HOME/.vim/setup.sh"
+rm -rf "$HOME/.vim" "$HOME/.vimrc" && mkdir -p "$HOME/.vim" && git clone git@github.com:image357/.vim.git "$HOME/.vim" || git clone https://github.com/image357/.vim.git "$HOME/.vim" && bash "$HOME/.vim/setup.sh"
 ```
 
 # Dependencies
