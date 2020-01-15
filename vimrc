@@ -117,6 +117,8 @@ nnoremap <leader>a :tabnew<CR>:Ack<space>
 " Plugin: Command-T {{{
 let g:CommandTAcceptSelectionMap = '<C-t>'
 let g:CommandTAcceptSelectionTabMap = '<CR>'
+let g:CommandTFileScanner = 'git'
+let g:CommandTGitIncludeUntracked = 1
 " }}}
 " Plugin: gundo.vim {{{
 let g:gundo_prefer_python3 = 1
