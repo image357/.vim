@@ -22,6 +22,10 @@ YOUCOMPLETEME_VERSION="master"
 CYGTEST=`uname -a | grep -i cygwin | cat`
 FBSDTEST=`uname -a | grep -i FreeBSD | cat`
 
+# language support tests
+command -v go > /dev/null
+GOTEST="$?"
+
 
 # print functions
 function startsetup {
@@ -103,11 +107,21 @@ cd "$YOUCOMPLETEME_PATH"
 if [ "$CYGTEST" == "" ]; then
     git checkout "$YOUCOMPLETEME_VERSION"
     git submodule update --init --recursive
-    ./install.py --clang-completer --go-completer
+    if [ "$GOTEST" == "0" ]; then
+        echo "compiling with go completer"
+        ./install.py --clang-completer --go-completer
+    else
+        ./install.py --clang-completer
+    fi
 else
     git checkout "95efbc87668783be8eadd94945cf6eba70823eea"
     git submodule update --init --recursive
-    ./install.py --clang-completer --system-libclang --go-completer
+    if [ "$GOTEST" == "0" ]; then
+        echo "compiling with go completer"
+        ./install.py --clang-completer --system-libclang --go-completer
+    else
+        ./install.py --clang-completer --system-libclang
+    fi
     echo "warning: Cygwin uses system libclang"
 fi
 endsetup "YouCompleteMe"
