@@ -23,8 +23,10 @@ CYGTEST=`uname -a | grep -i cygwin | cat`
 FBSDTEST=`uname -a | grep -i FreeBSD | cat`
 
 # language support tests
+set +e
 command -v go > /dev/null
 GOTEST="$?"
+set -e
 
 
 # print functions
