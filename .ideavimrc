@@ -1,0 +1,15 @@
+let mapleader=","
+
+set incsearch
+set hlsearch
+set ignorecase
+set smartcase
+
+nnoremap <leader><space> :nohlsearch<CR>
+nnoremap <leader>f :action ShowIntentionActions<cr>
+nnoremap <leader>g :action GotoDeclaration<cr>
+nnoremap <leader>h :action QuickJavaDoc<cr>
+nnoremap <leader>r :action Run<cr>
+nnoremap <leader><leader>r :action RunConfiguration<cr>
+nnoremap <leader>d :action Debug<cr>
+nnoremap <leader>q :wq<cr>
