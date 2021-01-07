@@ -1,5 +1,10 @@
 let mapleader=","
 
+set visualbell
+set noerrorbells
+set t_vb=
+set clipboard+=unnamed
+
 set incsearch
 set hlsearch
 set ignorecase
@@ -7,9 +12,15 @@ set smartcase
 
 nnoremap <leader><space> :nohlsearch<CR>
 nnoremap <leader>f :action ShowIntentionActions<cr>
+nnoremap <leader>c :action Refactorings.QuickListPopupAction<cr>
+xnoremap <leader>c :action Refactorings.QuickListPopupAction<cr>
 nnoremap <leader>g :action GotoDeclaration<cr>
 nnoremap <leader>h :action QuickJavaDoc<cr>
 nnoremap <leader>r :action Run<cr>
 nnoremap <leader><leader>r :action RunConfiguration<cr>
 nnoremap <leader>d :action Debug<cr>
 nnoremap <leader>q :wq<cr>
+nnoremap <leader>b :action Back<cr>
+
+set ideajoin
+set ideamarks
