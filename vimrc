@@ -92,6 +92,7 @@ nnoremap k gk
 nnoremap gV `[v`]
 nnoremap <leader>s :mksession! ~/.vim/session<cr>
 nnoremap <leader>l :source ~/.vim/session<cr>
+nnoremap <leader>q :wq<cr>
 
 inoremap jk <esc>
 
@@ -112,7 +113,7 @@ autocmd VimEnter * silent !echo -ne "\e[2 q"
 if executable('ag')
     let g:ackprg = 'ag --vimgrep'
 endif
-nnoremap <leader>a :tabnew<CR>:Ack<space>
+nnoremap <leader>a :tabnew<cr>:Ack<space>
 " }}}
 " Plugin: Command-T {{{
 let g:CommandTAcceptSelectionMap = '<C-t>'
