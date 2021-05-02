@@ -13,9 +13,9 @@ YOUCOMPLETEME_PATH="$BASE_PATH/bundle/YouCompleteMe"
 # version variables
 PATHOGEN_VERSION="master"
 ACKVIM_VERSION="master"
-COMMANDT_VERSION="tags/5.0.3"
-GRUVBOX_VERSION="tags/v3.0.1-rc.0"
-GUNDOVIM_VERSION="tags/v2.6.2"
+COMMANDT_VERSION="master"
+GRUVBOX_VERSION="master"
+GUNDOVIM_VERSION="master"
 YOUCOMPLETEME_VERSION="master"
 
 # operating system test
