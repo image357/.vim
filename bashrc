@@ -1,0 +1,45 @@
+# .bashrc
+
+# Source global definitions
+if [ -f /etc/bashrc ]; then
+	. /etc/bashrc
+fi
+
+# User specific environment
+if ! [[ "$PATH" =~ "$HOME/.local/bin:$HOME/bin:" ]]
+then
+    PATH="$HOME/.local/bin:$HOME/bin:$PATH"
+    export PATH
+fi
+
+GEMHOME="$HOME/.gem"; export GEMHOME
+if ! [[ "$PATH" =~ "$GEMHOME/bin" ]]
+then
+    PATH="$GEMHOME/bin:$PATH"
+    export PATH
+fi
+
+GOPATH="$HOME/.go"; export GOPATH
+if ! [[ "$PATH" =~ "$GOPATH/bin" ]]
+then
+    PATH="$GOPATH/bin:$PATH"
+    export PATH
+fi
+
+
+alias msync='rsync -rltpuzP'
+alias docker=podman
+
+# Uncomment the following line if you don't like systemctl's auto-paging feature:
+# export SYSTEMD_PAGER=
+
+# User specific aliases and functions
+if [ -d ~/.bashrc.d ]; then
+	for rc in ~/.bashrc.d/*; do
+		if [ -f "$rc" ]; then
+			. "$rc"
+		fi
+	done
+fi
+
+unset rc
