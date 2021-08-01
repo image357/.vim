@@ -1,3 +1,7 @@
+sethandler a:ide
+sethandler <C-W> a:vim
+sethandler <C-N> a:vim
+
 let mapleader=","
 
 set visualbell
