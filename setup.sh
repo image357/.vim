@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 set -e
 
 # path variables
@@ -80,9 +80,9 @@ git submodule update --init --recursive
 cd "$COMMANDT_PATH/ruby/command-t/ext/command-t"
 ruby extconf.rb
 if [ "$FBSDTEST" == "" ]; then
-    make
+    make -j $(nproc)
 else
-    gmake
+    gmake -j $(sysctl -n hw.ncpu)
 fi
 endsetup "command-t"
 
@@ -111,9 +111,9 @@ if [ "$CYGTEST" == "" ]; then
     git submodule update --init --recursive
     if [ "$GOTEST" == "0" ]; then
         echo "compiling with go completer"
-        ./install.py --clang-completer --go-completer
+        ./install.py --clangd-completer --go-completer
     else
-        ./install.py --clang-completer
+        ./install.py --clangd-completer
     fi
 else
     git checkout "95efbc87668783be8eadd94945cf6eba70823eea"
