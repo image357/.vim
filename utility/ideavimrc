@@ -16,17 +16,19 @@ set smartcase
 
 set number relativenumber
 
-nnoremap <leader><space> :nohlsearch<CR>
+nnoremap <leader><space> :nohlsearch<cr>
 nnoremap <leader>f :action ShowIntentionActions<cr>
+nnoremap <leader>e :action ShowErrorDescription<cr>
 nnoremap <leader>c :action Refactorings.QuickListPopupAction<cr>
 xnoremap <leader>c :action Refactorings.QuickListPopupAction<cr>
 nnoremap <leader>g :action GotoDeclaration<cr>
-nnoremap <leader>h :action QuickJavaDoc<cr>
-nnoremap <leader>r :action Run<cr>
-nnoremap <leader><leader>r :action RunConfiguration<cr>
-nnoremap <leader>d :action Debug<cr>
-nnoremap <leader>q :wq<cr>
 nnoremap <leader>b :action Back<cr>
+nnoremap <leader>h :action QuickJavaDoc<cr>
+nnoremap <leader>i :action QuickImplementations<cr>
+nnoremap <leader>r :action Run<cr>
+nnoremap <leader>d :action Debug<cr>
+nnoremap <leader><leader>r :action RunConfiguration<cr>
+nnoremap <leader>q :wq<cr>
 
 set ideajoin
 set ideamarks
