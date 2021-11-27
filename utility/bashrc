@@ -26,9 +26,7 @@ then
     export PATH
 fi
 
-
 alias msync='rsync -rltpuzP'
-alias docker='podman'
 alias ssh-keygen='ssh-keygen -t ed25519 -a 100'
 
 # Uncomment the following line if you don't like systemctl's auto-paging feature:
