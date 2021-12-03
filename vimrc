@@ -9,6 +9,9 @@ let mapleader=","           " set comma as leader
 set modeline                " enables file specific options
 set modelines=2             " search n lines for file specific options
 
+set mouse=a
+set colorcolumn=100
+
 set splitbelow              " open horizontal splits in the lower window
 set splitright              " open vertical splits in the right window
 
