@@ -28,6 +28,9 @@ rm -rf "$HOME/.vim" "$HOME/.vimrc" && mkdir -p "$HOME/.vim" && git clone git@git
   https://github.com/tpope/vim-pathogen
 * YouCompleteMe  
   https://github.com/Valloric/YouCompleteMe
+* NerdCommenter
+  https://github.com/preservim/nerdcommenter.git
+  
 
 # References
 https://dougblack.io/words/a-good-vimrc.html
@@ -74,7 +77,11 @@ You can change this setting in `$HOME/.vim/vimrc`.
   
 * **`<leader> l`**  
   Load previously saved vim session.
-  
+
+* **`<leader> c c**  
+  Comment or uncomment block.
+ 
+ 
 ### Insert Mode
 * **`jk`**  
   Leave insert mode and start normal mode.
