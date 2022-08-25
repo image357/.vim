@@ -30,6 +30,8 @@ set showcmd                 " show typed commands
 set wildmenu                " show autocomplete suggenstions
 set showmatch               " highlight matching brackets
 set colorcolumn=80
+set list
+set listchars=tab:⍿·,trail:⎵ 
 " }}}
 " Colorscheme {{{
 set termguicolors
