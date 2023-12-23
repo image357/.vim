@@ -49,7 +49,7 @@ You can change this setting in `$HOME/.vim/vimrc`.
   You can view the files by pressing `o` or open them in a new tab by pressing `t`. To close the file browser press `q`.
   
 * **`<leader> t`**  
-  Browse all files relative to your current working directory and open buffers.
+  Browse all open buffers and files relative to your current working directory.
   
 * **`<leader> r`**  
   If the current file is a python script, run it in an interactive terminal session.
