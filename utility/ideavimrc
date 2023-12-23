@@ -4,6 +4,7 @@ sethandler <C-N> a:vim
 
 let mapleader=","
 
+set showmode
 set visualbell
 set noerrorbells
 set t_vb=
@@ -15,20 +16,22 @@ set ignorecase
 set smartcase
 
 set number relativenumber
+set scrolloff=5
 
-nnoremap <leader><space> :nohlsearch<cr>
-nnoremap <leader>f :action ShowIntentionActions<cr>
-nnoremap <leader>e :action ShowErrorDescription<cr>
-nnoremap <leader>c :action Refactorings.QuickListPopupAction<cr>
-xnoremap <leader>c :action Refactorings.QuickListPopupAction<cr>
-nnoremap <leader>g :action GotoDeclaration<cr>
-nnoremap <leader>b :action Back<cr>
-nnoremap <leader>h :action QuickJavaDoc<cr>
-nnoremap <leader>i :action QuickImplementations<cr>
-nnoremap <leader>r :action Run<cr>
-nnoremap <leader>d :action Debug<cr>
-nnoremap <leader><leader>r :action RunConfiguration<cr>
-nnoremap <leader>q :wq<cr>
+nmap <leader><space> :nohlsearch<cr>
+nmap <leader>f <Action>(ShowIntentionActions)
+nmap <leader>e <Action>(ShowErrorDescription)
+nmap <leader>c <Action>(Refactorings.QuickListPopupAction)
+xmap <leader>c <Action>(Refactorings.QuickListPopupAction)
+nmap <leader>g <Action>(GotoDeclaration)
+nmap <leader>b <Action>(Back)
+nmap <leader>h <Action>(QuickJavaDoc)
+nmap <leader>i <Action>(Generate)
+nmap <leader>r <Action>(Run)
+nmap <leader>d <Action>(Debug)
+nmap <leader><leader>r <Action>(RunConfiguration)
+nmap <leader>q :wq<cr>
+imap jk <esc>
 
 set ideajoin
 set ideamarks

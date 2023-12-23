@@ -22,11 +22,13 @@ set fileencoding=utf-8       " utf-8 file encoding
 setglobal fileencoding=utf-8 " utf-8 file encoding
 " }}}
 " User Interface {{{
+set showmode                " always show mode
 set number                  " display line numbers
 set showcmd                 " show typed commands
 set wildmenu                " show autocomplete suggenstions
 set showmatch               " highlight matching brackets
-set colorcolumn=80
+set colorcolumn=80          " show colored line for intended line break
+set scrolloff=5             " keep curser centered
 " }}}
 " Colorscheme {{{
 set termguicolors
