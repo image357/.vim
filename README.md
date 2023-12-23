@@ -92,4 +92,4 @@ You can change this setting in `$HOME/.vim/vimrc`.
   Toggle comments for the selected lines.
   
 ### Autocompletion
-C/C++ autocompletion needs a `.ycm_extra_conf.py` file in the current directory. If there is none, the default file `$HOME/vim/ycm_extra_conf.py` will be used. Python autocompletion works out of the box, but can use an extra-conf-file (for setting up virtualenvs etc.).
+C/C++ autocompletion needs a `.ycm_extra_conf.py` file in the current directory. If there is none, the default file `$HOME/vim/utility/ycm_extra_conf.py` will be used. Python autocompletion works out of the box, but can use an extra-conf-file (for setting up virtualenvs etc.).
