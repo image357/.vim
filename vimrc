@@ -117,11 +117,15 @@ if executable('ag')
 endif
 nnoremap <leader>a :tabnew<cr>:Ack<space>
 " }}}
-" Plugin: Command-T {{{
-let g:CommandTAcceptSelectionMap = '<C-t>'
-let g:CommandTAcceptSelectionTabMap = '<CR>'
-let g:CommandTFileScanner = 'git'
-let g:CommandTGitIncludeUntracked = 1
+" Plugin: CtrlP {{{
+let g:ctrlp_map = '<leader>t'
+let g:ctrlp_cmd = 'CtrlPMixed'
+let g:ctrlp_working_path_mode = 'ra'
+let g:ctrlp_mruf_relative = 1
+let g:ctrlp_prompt_mappings = {
+    \ 'AcceptSelection("e")': ['<c-t>'],
+    \ 'AcceptSelection("t")': ['<cr>', '<2-LeftMouse>'],
+    \ }
 " }}}
 " Plugin: gundo.vim {{{
 let g:gundo_prefer_python3 = 1

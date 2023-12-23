@@ -5,7 +5,7 @@ set -e
 BASE_PATH="$HOME/.vim"
 PATHOGEN_PATH="$HOME/.vim/pathogen"
 ACKVIM_PATH="$BASE_PATH/bundle/ack.vim"
-COMMANDT_PATH="$BASE_PATH/bundle/command-t"
+CTRLP_PATH="$BASE_PATH/bundle/ctrlp.vim"
 GRUVBOX_PATH="$BASE_PATH/bundle/gruvbox"
 GUNDOVIM_PATH="$BASE_PATH/bundle/gundo.vim"
 NERDCOMMENTER_PATH="$BASE_PATH/bundle/nerdcommenter"
@@ -14,7 +14,7 @@ YOUCOMPLETEME_PATH="$BASE_PATH/bundle/YouCompleteMe"
 # version variables
 PATHOGEN_VERSION="master"
 ACKVIM_VERSION="master"
-COMMANDT_VERSION="master"
+CTRLP_VERSION="master"
 GRUVBOX_VERSION="master"
 GUNDOVIM_VERSION="master"
 NERDCOMMENTER_VERSION="master"
@@ -74,19 +74,12 @@ git submodule update --init --recursive
 endsetup "ack.vim"
 
 
-# setup command-t
-startsetup "command-t"
-cd "$COMMANDT_PATH"
-git checkout "$COMMANDT_VERSION"
+# setup ctrlp
+startsetup "ctrlp"
+cd "$CTRLP_PATH"
+git checkout "$CTRLP_VERSION"
 git submodule update --init --recursive
-cd "$COMMANDT_PATH/ruby/command-t/ext/command-t"
-ruby extconf.rb
-if [ "$FBSDTEST" == "" ]; then
-    make -j $(nproc)
-else
-    gmake -j $(sysctl -n hw.ncpu)
-fi
-endsetup "command-t"
+endsetup "ctrlp"
 
 
 # setup gruvbox

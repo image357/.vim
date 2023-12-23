@@ -8,7 +8,6 @@ rm -rf "$HOME/.vim" "$HOME/.vimrc" && mkdir -p "$HOME/.vim" && git clone git@git
 
 # Dependencies
 * python3-dev
-* ruby-dev
 * golang
 * gcc / (g)make / cmake
 * clang / libclang-devel / libc++-dev / libcxx-devel
@@ -18,8 +17,8 @@ rm -rf "$HOME/.vim" "$HOME/.vimrc" && mkdir -p "$HOME/.vim" && git clone git@git
 # Plugins
 * ack.vim  
   https://github.com/mileszs/ack.vim
-* command-t  
-  https://github.com/wincent/command-t
+* ctrlp  
+  https://github.com/ctrlpvim/ctrlp.vim
 * gruvbox  
   https://github.com/morhetz/gruvbox
 * gundo.vim  
@@ -50,10 +49,7 @@ You can change this setting in `$HOME/.vim/vimrc`.
   You can view the files by pressing `o` or open them in a new tab by pressing `t`. To close the file browser press `q`.
   
 * **`<leader> t`**  
-  Browse all files relative to your current working directory. `enter` will open them in a new tab. `<ctrl>+c` will close the file browser.
-  
-* **`<leader> b`** / **`<leader> j`**  
-  Browse open buffers / jumplist (like `<leader> t`).
+  Browse all files relative to your current working directory and open buffers.
   
 * **`<leader> r`**  
   If the current file is a python script, run it in an interactive terminal session.
