@@ -17,7 +17,7 @@ rm -rf "$HOME/.vim" "$HOME/.vimrc" && mkdir -p "$HOME/.vim" && git clone git@git
 # Plugins
 * ack.vim  
   https://github.com/mileszs/ack.vim
-* ctrlp  
+* ctrlp.vim  
   https://github.com/ctrlpvim/ctrlp.vim
 * gruvbox  
   https://github.com/morhetz/gruvbox
