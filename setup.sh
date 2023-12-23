@@ -8,6 +8,7 @@ ACKVIM_PATH="$BASE_PATH/bundle/ack.vim"
 COMMANDT_PATH="$BASE_PATH/bundle/command-t"
 GRUVBOX_PATH="$BASE_PATH/bundle/gruvbox"
 GUNDOVIM_PATH="$BASE_PATH/bundle/gundo.vim"
+NERDCOMMENTER_PATH="$BASE_PATH/bundle/nerdcommenter"
 YOUCOMPLETEME_PATH="$BASE_PATH/bundle/YouCompleteMe"
 
 # version variables
@@ -16,6 +17,7 @@ ACKVIM_VERSION="master"
 COMMANDT_VERSION="master"
 GRUVBOX_VERSION="master"
 GUNDOVIM_VERSION="master"
+NERDCOMMENTER_VERSION="master"
 YOUCOMPLETEME_VERSION="master"
 
 # operating system test
@@ -103,6 +105,14 @@ git submodule update --init --recursive
 endsetup "gundo.vim"
 
 
+# setup nerdcommenter
+startsetup "nerdcommenter"
+cd "$NERDCOMMENTER_PATH"
+git checkout "$NERDCOMMENTER_VERSION"
+git submodule update --init --recursive
+endsetup "nerdcommenter"
+
+
 # setup YouCompleteMe
 startsetup "YouCompleteMe"
 cd "$YOUCOMPLETEME_PATH"
@@ -116,6 +126,7 @@ if [ "$CYGTEST" == "" ]; then
         ./install.py --clangd-completer
     fi
 else
+    # cygwin setup is very old, may need an update
     git checkout "95efbc87668783be8eadd94945cf6eba70823eea"
     git submodule update --init --recursive
     if [ "$GOTEST" == "0" ]; then

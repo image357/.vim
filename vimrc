@@ -27,7 +27,7 @@ set number                  " display line numbers
 set showcmd                 " show typed commands
 set wildmenu                " show autocomplete suggenstions
 set showmatch               " highlight matching brackets
-set colorcolumn=80          " show colored line for intended line break
+set colorcolumn=120         " show colored line for intended line break
 set scrolloff=5             " keep curser centered
 " }}}
 " Colorscheme {{{
@@ -130,9 +130,26 @@ nnoremap <leader>u :GundoToggle<cr>
 " Plugin: YouCompleteMe {{{
 let g:ycm_global_ycm_extra_conf = '~/.vim/utilit/ycm_extra_conf.py'
 let g:ycm_goto_buffer_command = 'new-or-existing-tab'
+
 nnoremap <leader>c :YcmForceCompileAndDiagnostics<cr>
 nnoremap <leader>f :YcmCompleter FixIt<cr>
 nnoremap <leader>g :YcmCompleter GoTo<cr>
 nnoremap <leader>h :YcmCompleter GetDoc<cr>
+" }}}
+" Plugin: nerdcommenter {{{
+let g:NERDCreateDefaultMappings = 0
+let g:NERDDefaultNesting = 0
+let g:NERDCompactSexyComs = 0
+let g:NERDSpaceDelims = 0
+let g:NERDRemoveExtraSpaces = 0
+let g:NERDTrimTrailingWhitespace = 1
+let g:NERDCommentEmptyLines = 1
+let g:NERDToggleCheckAllLines = 1
+let g:NERDDefaultAlign = 'left'
+
+inoremap <C-_> <C-o>:call nerdcommenter#Comment('n', 'toggle')<cr>
+nnoremap <C-_> :call nerdcommenter#Comment('n', 'toggle')<cr>
+vnoremap <C-_> :call nerdcommenter#Comment('x', 'toggle')<cr>
+xnoremap <C-_> :call nerdcommenter#Comment('x', 'toggle')<cr>
 " }}}
 " vim:foldmethod=marker:foldlevel=0

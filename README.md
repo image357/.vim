@@ -24,6 +24,8 @@ rm -rf "$HOME/.vim" "$HOME/.vimrc" && mkdir -p "$HOME/.vim" && git clone git@git
   https://github.com/morhetz/gruvbox
 * gundo.vim  
   https://github.com/sjl/gundo.vim
+* nerdcommenter  
+  https://github.com/preservim/nerdcommenter
 * pathogen  
   https://github.com/tpope/vim-pathogen
 * YouCompleteMe  
@@ -84,6 +86,10 @@ You can change this setting in `$HOME/.vim/vimrc`.
   
 * **`<tab>`** / **`<shift> + <tab>`**  
   Cycle through the autocompletion suggestions.
+
+### All Modes
+* **`<ctrl> + /`**  
+  Toggle comments for the selected lines.
   
 ### Autocompletion
 C/C++ autocompletion needs a `.ycm_extra_conf.py` file in the current directory. If there is none, the default file `$HOME/vim/ycm_extra_conf.py` will be used. Python autocompletion works out of the box, but can use an extra-conf-file (for setting up virtualenvs etc.).

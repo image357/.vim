@@ -28,3 +28,8 @@
 	url = https://github.com/Valloric/YouCompleteMe.git
 	branch = master
 	ignore = all
+[submodule "bundle/nerdcommenter"]
+	path = bundle/nerdcommenter
+	url = https://github.com/preservim/nerdcommenter.git
+	branch = master
+	ignore = all
