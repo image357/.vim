@@ -28,6 +28,8 @@ FBSDTEST=`uname -a | grep -i FreeBSD | cat`
 set +e
 command -v go > /dev/null
 GOTEST="$?"
+command -v rustc > /dev/null
+RUSTTEST="$?"
 set -e
 
 
@@ -114,9 +116,10 @@ if [ "$CYGTEST" == "" ]; then
     git submodule update --init --recursive
     if [ "$GOTEST" == "0" ]; then
         echo "compiling with go completer"
-        ./install.py --clangd-completer --go-completer
+        ./install.py --clangd-completer --rust-completer --go-completer
     else
-        ./install.py --clangd-completer
+        echo "warning: golang install not found"
+        ./install.py --clangd-completer --rust-completer
     fi
 else
     # cygwin setup is very old, may need an update
