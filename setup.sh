@@ -111,16 +111,21 @@ endsetup "nerdcommenter"
 # setup YouCompleteMe
 startsetup "YouCompleteMe"
 cd "$YOUCOMPLETEME_PATH"
+COMPLETER_OPTIONS="--clangd-completer"
+
+if [ "$GOTEST" == "0" ]; then
+    echo "compiling with go completer"
+    COMPLETER_OPTIONS="$COMPLETER_OPTIONS --go-completer"
+fi
+if [ "$RUSTTEST" == "0" ]; then
+    echo "compiling with rust completer"
+    COMPLETER_OPTIONS="$COMPLETER_OPTIONS --rust-completer"
+fi
+
 if [ "$CYGTEST" == "" ]; then
     git checkout "$YOUCOMPLETEME_VERSION"
     git submodule update --init --recursive
-    if [ "$GOTEST" == "0" ]; then
-        echo "compiling with go completer"
-        ./install.py --clangd-completer --rust-completer --go-completer
-    else
-        echo "warning: golang install not found"
-        ./install.py --clangd-completer --rust-completer
-    fi
+    ./install.py $COMPLETER_OPTIONS
 else
     # cygwin setup is very old, may need an update
     git checkout "95efbc87668783be8eadd94945cf6eba70823eea"
