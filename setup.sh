@@ -18,7 +18,7 @@ CTRLP_VERSION="master"
 GRUVBOX_VERSION="master"
 GUNDOVIM_VERSION="master"
 NERDCOMMENTER_VERSION="master"
-YOUCOMPLETEME_VERSION="master"
+YOUCOMPLETEME_VERSION="7b83740a13c4778288374f73eb384a6ca7745bb8"
 
 # operating system test
 CYGTEST=`uname -a | grep -i cygwin | cat`
