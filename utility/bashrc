@@ -20,7 +20,7 @@ pathlist=(
     "$GOPATH/bin"
 )
 
-for path in "${pathlist}"; do
+for path in "${pathlist[@]}"; do
     if ! [[ ":$PATH:" == *":$path:"* ]]; then
         PATH="$path:$PATH"
         export PATH
