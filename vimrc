@@ -20,6 +20,8 @@ set expandtab               " tabstop will be expanded to spaces
 set encoding=utf-8           " utf-8 encoding for terminal
 set fileencoding=utf-8       " utf-8 file encoding
 setglobal fileencoding=utf-8 " utf-8 file encoding
+
+set belloff=all              " disable audio bell
 " }}}
 " User Interface {{{
 set showmode                " always show mode
